@@ -426,7 +426,11 @@
       .gal-cell:first-child { grid-row: span 1; }
       .hotel-body { grid-template-columns: 1fr; }
       .reserva-card { position: static; }
-      .hab-grid { grid-template-columns: 1fr; }
+      .hab-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      }
       .ge-grid { grid-template-columns: 1fr; }
       .resenas-grid { grid-template-columns: 1fr; }
       .amenities-grid { grid-template-columns: 1fr 1fr; }
