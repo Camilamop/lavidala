@@ -100,7 +100,7 @@ nav {
 .temp-card-header { height: 160px; background: var(--verde); display: flex; align-items: flex-end; padding: 20px; }
 .temp-card-header.tafi { background: #0D3B38; }
 .temp-card-header span { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: rgba(196,154,42,0.15); padding: 4px 10px; border-radius: 2px; }
-.temp-card-body { padding: 24px; }
+.temp-card-body { padding: 24px;}
 .temp-card-body h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; margin-bottom: 8px; }
 .temp-card-body p { font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 16px; }
 .temp-link { font-size: 13px; font-weight: 500; color: var(--gold); }
@@ -132,6 +132,11 @@ footer a { color: var(--gold); text-decoration: none; }
   .temp-cards { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   footer { flex-direction: column; gap: 10px; text-align: center; }
+  .actividades-grid { grid-template-columns: 1fr 1fr; }
+  .tafi-carrusel { max-width: 100%; height: 220px; }
+  .amenities-grid { grid-template-columns: 1fr; }
+  .ge-grid { grid-template-columns: 1fr; }
+  .resenas-grid { grid-template-columns: 1fr; }
 }
 
 .prop-card-img { position: relative; overflow: hidden; }
