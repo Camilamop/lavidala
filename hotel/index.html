@@ -509,7 +509,7 @@
 
 <!-- CUERPO PRINCIPAL -->
 <section class="hotel-body">
-  <div>
+  <div style="min-width: 0; width: 100%;">
 
     <!-- SOBRE EL HOSTAL -->
     <div id="sobre">
@@ -856,7 +856,7 @@
   </div><!-- /columna izquierda -->
 
   <!-- CARD RESERVA -->
-  <div class="reserva-card" id="reservar">
+  <div class="reserva-card" id="reservar" style="min-width: 0; width: 100%;">
     <div class="reserva-card-title">Pre-reservar estadía</div>
     <div class="reserva-card-sub">Seleccioná las fechas y completá el formulario. Te confirmamos en menos de 24 hs.</div>
 
@@ -1003,16 +1003,16 @@
 // ── GALERÍA MODAL ──────────────────────────────────────────
 const fotos = [
   { src: 'img/hotel-01.jpg', caption: 'Fachada — La Vidala' },
-  { src: 'img/hotel-02.jpg', caption: 'Recepción' },
-  { src: 'img/hotel-03.jpg', caption: 'Jardin' },
-  { src: 'img/hotel-04.jpg', caption: 'Pasillo de habitaciones' },
-  { src: 'img/hotel-05.jpg', caption: 'Habitacion' },
-  { src: 'img/hotel-06.jpg', caption: 'Edificio y jardín' },
+  { src: 'img/hotel-02.jpg', caption: 'Jardín- Fogón' },
+  { src: 'img/hotel-03.jpg', caption: 'Jardín' },
+  { src: 'img/hotel-04.jpg', caption: 'Recepción' },
+  { src: 'img/hotel-05.JPG', caption: 'Habitacion' },
+  { src: 'img/hotel-06.JPG', caption: 'Edificio y jardín' },
   { src: 'img/hotel-07.jpg', caption: 'Desayuno' },
-  { src: 'img/hotel-08.jpg', caption: 'Comedor — atardecer' },
+  { src: 'img/hotel-08.jpg', caption: 'Pasillo a habitaciones' },
   { src: 'img/hotel-09.jpg', caption: 'Entrada' },
-  { src: 'img/hotel-10.jpg', caption: 'Rincon de niños' },
-  { src: 'img/hotel-11.jpg', caption: 'Comedor' },
+  { src: 'img/hotel-10.JPG', caption: 'Rincon de niños' },
+  { src: 'img/hotel-11.JPG', caption: 'Comedor' },
 ];
 let mIdx = 0;
 function abrirModal(i) { mIdx = i; document.getElementById('modal').classList.add('open'); actualizarModal(); }
