@@ -424,29 +424,96 @@
     .ubicacion-dato { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; font-size: 14px; color: var(--gray); }
     .ubicacion-dato svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0; margin-top: 2px; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .galeria-mosaico { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .gal-cell:first-child { grid-row: span 1; }
-      .hotel-body { grid-template-columns: 1fr; }
-      .reserva-card { position: static; }
-      .hab-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      }
-      .ge-grid { grid-template-columns: 1fr; }
-      .resenas-grid { grid-template-columns: 1fr; }
-      .amenities-grid { grid-template-columns: 1fr 1fr; }
-      .gastro-grid { grid-template-columns: 1fr 1fr; }
-      .ubicacion-inner { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .tafi-carrusel { height: 220px; }
-      .tafi-slide { height: 220px; }
-      body { overflow-x: hidden; }
-      .galeria-mosaico { grid-template-columns: 1fr 1fr; width: 100%; }
-      .nav-links { display: none; }
-    }
+    /* ── BASE: hab-grid necesita display grid declarado ── */
+.hab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  /* Grid principal: una columna */
+  .hotel-body {
+    grid-template-columns: 1fr !important;
+    padding: 32px 4% !important;
+    gap: 32px !important;
+  }
+
+  /* Card de reserva: no sticky */
+  .reserva-card {
+    position: static !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Galería */
+  .galeria-mosaico {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    width: 100% !important;
+  }
+  .gal-cell:first-child { grid-row: span 1 !important; }
+
+  /* Carrusel Tafí: quitar max-width fijo */
+  .tafi-carrusel {
+    max-width: 100% !important;
+    height: 220px !important;
+  }
+  .tafi-slide { height: 220px !important; }
+
+  /* Actividades: 2 columnas (180px mínimo causa overflow → usar 1fr) */
+  .actividades-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Habitaciones */
+  .hab-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Gastronomía */
+  .gastro-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Grupos y eventos */
+  .ge-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reseñas */
+  .resenas-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Formulario */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ubicación */
+  .ubicacion-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Nav */
+  .nav-links {
+    display: none !important;
+  }
+}
   </style>
 </head>
 <body>
